@@ -1,0 +1,20 @@
+{
+  "name": "elementmovejs",
+  "version": "1.0.0",
+  "description": "Simple program for moving element.",
+  "main": "index.js",
+  "scripts": {
+    "tsc:em": "tsc --target es6 --noEmitOnError --removeComments ./elementmove.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sawissac/elementmovejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sawissac/elementmovejs/issues"
+  },
+  "homepage": "https://github.com/sawissac/elementmovejs#readme"
+}
