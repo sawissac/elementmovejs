@@ -1,2 +1,2 @@
 # elementmovejs
-Simple program for moving element.
+DOM Element Moving Util for javascript.

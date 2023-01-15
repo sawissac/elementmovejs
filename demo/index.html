@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin:0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .box{
+      --area: 100px;
+      width: var(--area);
+      height: var(--area);
+      background: black;
+      border-radius: 9px;
+    }
+  </style>
+</head>
+<body >
+  <div id="move-util-boundary" style="height: 100vh;">
+    <div class="box" id="box"></div>
+  </div>
+
+  <script src="../index.umd.js"></script>
+  <script>
+    const {ScreenBoundaryDetection, MoveUtil}= MoveElementJs;
+
+    const {detection, boundary} = ScreenBoundaryDetection();
+
+    const moveutil = new MoveUtil({
+      el: document.getElementById("box"),
+      detection: detection,
+      boundary: boundary,
+      pushBackDistance: 10
+    })
+    const position = {
+      left: (boundary.clientWidth / 2) - 50,
+      top: (boundary.clientHeight / 2) - 50,
+    }
+    moveutil.setPosition(position)
+  </script>
+</body>
+</html>

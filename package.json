@@ -1,20 +1,35 @@
 {
-  "name": "elementmovejs",
-  "version": "1.0.0",
-  "description": "Simple program for moving element.",
-  "main": "index.js",
+  "name": "@waux/element-move-js",
+  "version": "1.2.0",
+  "description": "DOM Element Moving Util for javascript.",
+  "type": "module",
+  "main": "index.umd.js",
+  "module": "index.js",
+  "files": [
+    "index.d.ts",
+    "index.umd.js",
+    "index.js"
+  ], 
+  "types": "./index.d.ts",
   "scripts": {
-    "tsc:em": "tsc --target es6 --noEmitOnError --removeComments ./elementmove.ts"
+    "tsc:build": "pnpm tsc",
+    "rollup:build": "pnpm rollup -c rollup.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sawissac/elementmovejs.git"
   },
-  "keywords": [],
+  "keywords": ["DomMover"],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sawissac/elementmovejs/issues"
   },
-  "homepage": "https://github.com/sawissac/elementmovejs#readme"
+  "homepage": "https://github.com/sawissac/elementmovejs#readme",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.3.0",
+    "rollup": "^3.10.0",
+    "rollup-plugin-dts": "^5.1.1",
+    "typescript": "^4.9.4"
+  }
 }
